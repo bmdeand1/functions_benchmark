@@ -1,0 +1,6 @@
+.DS_Store
+.terraform/
+benchmark_*.txt
+terraform.tfstate*
+success.txt
+urls.txt
