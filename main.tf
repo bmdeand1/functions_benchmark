@@ -65,7 +65,7 @@ resource "google_cloudfunctions2_function" "cf-gen2" {
   service_config {
     max_instance_count = 4
     available_memory   = "256M"
-    min_instance_count = 1
+    min_instance_count = 2
     timeout_seconds    = 60
   }
 }
@@ -93,7 +93,7 @@ resource "google_cloud_run_service" "cr" {
     metadata {
       annotations = {
         "autoscaling.knative.dev/maxScale"  = 10
-        "autoscaling.knative.dev/minScale"  = 1
+        "autoscaling.knative.dev/minScale"  = 2
         "run.googleapis.com/cpu-throttling" = false
       }
     }
